@@ -1,10 +1,10 @@
 name := "swagger-play2"
-version := "1.5.2-SNAPSHOT"
+version := "1.5.2"
 
 checksums in update := Nil
 
-scalaVersion:= "2.11.6"
-crossScalaVersions := Seq("2.11.6", "2.11.7")
+scalaVersion:= "2.11.8"
+crossScalaVersions := Seq("2.11.6", "2.11.7", "2.11.8")
 
 libraryDependencies ++= Seq(
   "org.slf4j"                      % "slf4j-api"                  % "1.7.16",
@@ -69,4 +69,4 @@ pomExtra := {
   </developers>
 }
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val swagger = Project(id = "play-swagger", base = file(".")).enablePlugins(PlayScala)
